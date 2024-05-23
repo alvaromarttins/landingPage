@@ -1,0 +1,793 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+:root{
+    --cor1: #146363;
+    --cor2: #65FCFC;
+    --cor3: #009696;
+    --cor4: #99FFFF;
+    --cor5: #CCFFFF;
+    --cor6: #c8c8c8;
+    --cor7: #104e4e;
+    ;
+}
+
+/* Edições da parte do header (Cabeçalho) */
+header {
+    position: relative;
+    background: black url("../img/c2.webp") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}  
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.container{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    color: white;
+    opacity: 1;
+    height: 6rem;
+    /* background-color: rebeccapurple; */
+}
+
+/* Logo */
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 20px;
+    width: 19rem;
+    cursor: pointer;
+}
+.imgLogo{
+    width: 4rem;
+    height: 4rem;
+    background: url("../img/logoEscaleno.jpg");
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0px 10px;
+}
+.nameLogo{
+    font-size: 1.3rem;
+}
+
+/* Navegação */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    /* padding-left: 60px; */
+}
+
+header a{
+    font-size: 1.2rem;
+    color: white;
+    padding: 0px 50px;
+}
+.navMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    transition: .4s all ease-out;
+}
+.navMain a:hover {
+    /* background-color: var(--cor1); */
+    border-bottom: 1px solid var(--cor2);
+    color: var(--cor2);
+}
+.navMain a, .navContact a {
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    padding: 10px 10px;
+    margin: 0 10px;
+}
+.navContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navContact a{
+    width: 10rem;
+    border: 1px solid var(--cor2);
+    border-radius: 7px;    margin-right: 50px;
+    transition: .5s all ease-out;
+}
+.navContact a:hover{
+    background-color: var(--cor1);
+    border: 1px solid var(--cor1);
+    color: white;
+}
+.bar{
+    display: none;
+}
+
+
+
+
+/* slogan */
+.sloganContainer{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 7rem;
+    width: 50rem;
+    height: calc(100% - 6rem);
+    /* background-color: red; */
+}
+.slogan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 20rem;
+    padding: 20px;
+    /* background-color: green; */
+}
+.slogan p {
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+    /* background-color: rebeccapurple; */
+    text-align: left;
+}
+
+.buttonSlogan {
+    display: flex;
+    padding-top: 20px;
+    /* background-color: red; */
+}
+
+.btnSlogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonSloganMobile{
+    display: none;
+}
+.btnSlogan a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cor2);
+    border-radius: 7px;
+    padding: 10px;
+    width: 10rem;
+    margin: 0 30px 0 0;
+    color: white;
+    transition: .4s all ease-out;
+}
+.btnSlogan a:hover{
+    background-color: var(--cor1);
+    border: 1px solid var(--cor1);
+    color: white;
+}
+
+
+/* main */
+
+main{
+    /* background-color: red; */
+    padding: 30px 0;
+}
+
+.titleMain{
+    width: 100%;
+}
+.titleMain > h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor3 );
+    margin: 0 30rem;
+}
+.contentImageMian{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.project{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+    margin: 10px;
+    padding: 10px;
+    /* background-color: rebeccapurple; */
+}
+.contentImageMian a{
+    color: black;
+    transition: .3s all ease-out;
+}
+.contentImageMian a:hover{
+    color: black;
+    transform: scale(1.05);
+    /* background-color: rebeccapurple; */
+}
+.img1Main, .img2Main, .img3Main, .img4Main{
+    width: 100%;
+    height: 15rem;
+    border-radius: 5px;
+}
+.img1Main{
+    background: black url("../img/c8.jpg") center no-repeat;
+    background-size: cover;
+}
+.img2Main{
+    background: black url("../img/c4.jpg") center no-repeat;
+    background-size: cover;
+}
+.img3Main{
+    background: black url("../img/c5.jpg") center no-repeat;
+    background-size: cover;
+}
+.img4Main{
+    background: black url("../img/c9.jpg") center no-repeat;
+    background-size: cover;
+}
+main h3{
+    color: var(--cor3);
+}
+
+.buttonMoreProject{
+    display: flex;
+    justify-content: center;
+}
+.buttonMoreProject a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cor1);
+    border-radius: 7px;
+    width: 10rem;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: var(--cor1);
+    transition: .3s all ease-out;
+}
+.buttonMoreProject a:hover{
+    background-color: var(--cor1);
+    border: 1px solid var(--cor4);
+    color: white;
+}
+
+
+/* Progresos da empressa */
+.containerProgressMain{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+    background-color: white;
+    box-shadow: 0px 0px 17px -11px black;
+}
+.shapeProgress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border: 4px solid var(--cor1);
+    border-right: 4px solid var(--cor2);
+    border-radius: 50%;
+    padding: 40px;
+    margin-bottom: 10px;
+}
+
+.shapeProgress span{
+    color: var(--cor1);
+    font-size: 1.7rem;
+}
+.progress{
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 20rem;
+    cursor: pointer;
+}
+
+/* Imagem de separacao dos progressos */
+.imgSeparationProject{
+    height: 25rem;
+    width: 100%; 
+    /* background: black url("../img/c1.jpg") center no-repeat;
+    background-size: cover; */
+    background-color: var(--cor1);
+    margin-bottom: 20px;
+}
+
+/* Sobre nos */
+.aboutUsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.aboutUsContainer .w-50{
+    width: 50vw;
+    height: 100%;
+}
+.aboutUsContainer .imgAboutUs{
+    background-color: red;
+    width: 50%;
+    height: 50vh;
+    margin: 0px 50px 0px 100px;
+    background: white url('../img/c3.jpg') center no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+.aboutUsContainer .imgAboutUs:hover{
+    transform: scale(1.05);
+}
+.aboutUsDescription, .shareWithUsDescription{
+    /* background-color: pink; */
+    padding: 50px 40px;
+
+}
+.aboutUsDescription h4, .shareWithUsDescription h4{
+    font-weight: 600;
+    color: var(--cor6);
+}
+.aboutUsDescription h2, .shareWithUsDescription h2{
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+.aboutUsDescription p, .shareWithUsDescription p{
+    line-height: 2.5rem;
+    /* background-color: rebeccapurple; */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.aboutUsDescription a, .shareWithUsDescription a {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--cor1);
+    color: white;
+    transition: .4s all ease-out;
+}
+.aboutUsDescription a:hover, .shareWithUsDescription a:hover {
+
+    background-color: var(--cor7);
+}
+
+
+
+/* Partilhe suas ideias com a nossa equipe */
+.shareWithUsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+.shareWithUsContainer .w-50{
+    width: 50vw;
+    height: 100%;
+}
+
+.shareWithUsDescription{
+    margin: 0px 50px 0px 100px;
+}
+.shareWithUsContainer .imageShareWithUs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 50px 0 0;
+}
+.img1ShareWithUs, .img2ShareWithUs, .img3ShareWithUs{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+.img1ShareWithUs:hover, .img2ShareWithUs:hover, .img3ShareWithUs:hover{
+    transform: scale(1.05);
+    overflow-x: none;
+}
+.img1ShareWithUs{
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background: white url('../img/c9.jpg') center no-repeat;
+    background-size: cover;
+} 
+.img2ShareWithUs{
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background: white url('../img/c11.jpg') center no-repeat;
+    background-size: cover;
+    
+} 
+.img3ShareWithUs{
+    display: grid;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    height: 300px;
+    background: white url('../img/c10.jpg') center no-repeat;
+    background-size: cover;
+
+}
+
+/* Tem espacoes pequeno e nao sabe estruturar? */
+.organizeSpaceContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    /* background-color: red; */
+}
+.organizeSpaceContainer .w-50{
+    width: 50vw;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+}
+
+.organizeSpaceContainer .organizeSpace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 0 0 100px;
+}
+.img1organizeSpace, .img2organizeSpace, .img3organizeSpace{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+.img1organizeSpace:hover, .img2organizeSpace:hover, .img3organizeSpace:hover{
+    transform: scale(1.05);
+    overflow-x: none;
+}
+.img1organizeSpace{
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background: white url('../img/c11.jpg') center no-repeat;
+    background-size: cover;
+} 
+.img2organizeSpace{
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background: white url('../img/c12.jpg') center no-repeat;
+    background-size: cover;
+    
+} 
+.img3organizeSpace{
+    display: grid;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    height: 300px;
+    background: white url('../img/c10.jpg') center no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
+/* Nossos serviços */
+
+.ourServices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 17px -11px black;
+    padding: 40px 0;
+}
+.titleOurServices{
+    width: 100%;
+    text-align: center;
+}
+.titleOurServices > h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor3);
+    margin: 0 30rem 1rem 30rem;
+}
+.servicesContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+    min-height: 10rem;
+    max-height: 100%;
+    margin: 20px;
+    border: 1px solid var(--cor1);
+    /* background-color: var(--cor5); */
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0px 0px 17px -11px black;
+    transition: .4s all ease-out;
+    /* box-shadow: 9px 5px 13px -13px black; */
+}
+.services:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.services .fa-solid{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 8px;
+    margin: 8px 0;
+    background-color: var(--cor1);
+    color: white;
+    border-radius: 50%;
+}
+.services .nameService{
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.services .descriptionServices{
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+
+
+
+/* Rodape */
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.containerFooter{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+    /* background-color: red; */
+}
+.footerAboutUs, .footerContact, .footerOpeningHours{
+    width: 22rem;
+    /* background-color: green; */
+}
+.footerAboutUs h2{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+.footerAboutUs p{
+    font-weight: 300;
+    font-size: .9rem;
+}
+.footerContact h2, .footerOpeningHours h2{
+    font-weight: 500;
+    padding-bottom: 5px;
+
+}
+.footerIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: var(--cor1);
+    color: white;
+    border-radius: 50%;
+}
+.footerDescription{
+    font-weight: 200;
+    font-size: .9rem;
+    /* background-color: green; */
+    padding: 5px;
+}
+.footerContact .contactEmail, .contactLocation, .contactPhone{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 10px 0;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+/* Copyrigth */
+.copyrigth{
+    display: grid;
+    place-items: center;
+    background-color: black;
+    padding: 10px;
+    color: white;
+
+}
+.contentCopyrigth{
+    padding-bottom: 10px;
+}
+.contactSocialMedia{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+}
+
+.contactSocialMedia h2{
+    font-size: 1.2rem;
+    font-weight: 200;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.contactSocialMedia 
+.socialMediaWhatsapp, 
+.socialMediaInstagram, 
+.socialMediaFacebook{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    header {
+        position: relative;
+        background: black url("../img/c2.webp") center no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }  
+    
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+    
+    .container{
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: white;
+        opacity: 1;
+        height: 6rem;
+        /* background-color: rebeccapurple; */
+    }
+    
+    /* Logo */
+    .logo{
+        display: flex;
+        align-items: center;
+        padding: 0px 0px 0px 20px;
+        width: 19rem;
+    }
+    .imgLogo{
+        width: 3rem;
+        height: 3rem;
+        background: url("../img/logoEscaleno.jpg");
+        background-size: cover;
+        border-radius: 100%;
+        margin: 0px 10px;
+    }
+    .nameLogo{
+        display: none;
+    }
+    
+    /* Navegação */
+    
+    nav {
+        display: none;
+    }
+    .bar{
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    /* slogan */
+    .sloganContainer{
+        display: block;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 6rem);
+        /* background-color: red; */
+    }
+    .slogan{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        /* background-color: green; */
+    }
+    .slogan p {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        /* background-color: rebeccapurple; */
+        text-align: left;
+    }
+    
+    .buttonSlogan {
+        display: none;
+    }
+    .buttonSloganMobile{
+        display: block;
+    }
+    .btnSloganMobile a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid var(--cor3);
+        border-radius: 3px;
+        padding: 10px;
+        width: 10rem;
+        margin: 50px 0 0 0;
+        transition: .5s all ease-out;    
+    }
+
+    .btnSloganMobile a:hover{
+        border: 3px solid var(--cor1);
+        /* background-color: yellow; */
+    }
+
+}
